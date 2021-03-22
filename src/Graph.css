@@ -1,0 +1,10 @@
+.sidebyside {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 700px) {
+    .sidebyside {
+      flex-direction: column;
+    }
+  }
