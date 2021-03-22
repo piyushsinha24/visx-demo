@@ -11,7 +11,7 @@ import {
 
 import CustomChartBackground from './CustomChartBackground';
 
-  const Demand = [
+  const PlannedDemand = [
     { x: "Jan'21", y: 10, total: 10 },
     { x: "Feb'21", y: 23, total: 33 },
     { x: "Mar'21", y: 27, total: 60 },
@@ -26,7 +26,7 @@ import CustomChartBackground from './CustomChartBackground';
     { x: "Dec'21", y: 100, total: 607 },
   ];
   
-  const Supply = [
+  const PlannedSupply = [
     { x: "Jan'21", y: 10, total: 10 },
     { x: "Feb'21", y: 18, total: 28 },
     { x: "Mar'21", y: 24, total: 52 },
@@ -47,21 +47,21 @@ import CustomChartBackground from './CustomChartBackground';
     totalAccessor: d => d.total
   };
 
-  const colors = {"Demand":"#0e8ff9", "Supply": "#ff6200"};
+  const colors = {"Planned Demand":"#0e8ff9", "Planned Supply": "#ff6200"};
   
   
-  class Graph extends Component {
+  class Graph2 extends Component {
       render() {
           return (
             <div>
-            <h2>Demand Vs Supply</h2>
+            <h2>Planned Demand Vs Planned Supply</h2>
             <XYChart height={600} xScale={{ type: 'band' }} yScale={{ type: 'linear' }}>
             <CustomChartBackground />
             <AnimatedAxis orientation="bottom"/>
             <AnimatedAxis orientation="left"/>
             <AnimatedGrid columns={false} numTicks={4} />
-            <AnimatedLineSeries dataKey="Demand" data={Demand} {...accessors} stroke={"#0e8ff9"}/>
-            <AnimatedAreaSeries dataKey="Supply" data={Supply} {...accessors} stroke={"#ff6200"} fill={"#ff6200"} fillOpacity={"0.8"}/>
+            <AnimatedLineSeries dataKey="Planned Demand" data={PlannedDemand} {...accessors} stroke={"#0e8ff9"}/>
+            <AnimatedAreaSeries dataKey="Planned Supply" data={PlannedSupply} {...accessors} stroke={"#ff6200"} fill={"#ff6200"} fillOpacity={"0.8"}/>
             <Tooltip
               snapTooltipToDatumX
               snapTooltipToDatumY
@@ -86,7 +86,7 @@ import CustomChartBackground from './CustomChartBackground';
             <AnimatedAxis orientation="bottom"/>
             <AnimatedAxis orientation="left"/>
             <AnimatedGrid columns={false} numTicks={4} />
-            <AnimatedAreaSeries dataKey="Demand" data={Demand} {...accessors} stroke={"#0e8ff9"} fill={"#0e8ff9"} fillOpacity={0.6}/>
+            <AnimatedAreaSeries dataKey="Planned Demand" data={PlannedDemand} {...accessors} stroke={"#0e8ff9"} fill={"#0e8ff9"} fillOpacity={0.6}/>
             <Tooltip
               snapTooltipToDatumX
               snapTooltipToDatumY
@@ -110,7 +110,7 @@ import CustomChartBackground from './CustomChartBackground';
             <AnimatedAxis orientation="bottom"/>
             <AnimatedAxis orientation="left"/>
             <AnimatedGrid columns={false} numTicks={4} />
-            <AnimatedAreaSeries dataKey="Supply" data={Supply} {...accessors} stroke={"#ff6200"} fill={"#ff6200"} fillOpacity={0.8}/>
+            <AnimatedAreaSeries dataKey="Planned Supply" data={PlannedSupply} {...accessors} stroke={"#ff6200"} fill={"#ff6200"} fillOpacity={0.8}/>
             <Tooltip
               snapTooltipToDatumX
               snapTooltipToDatumY
@@ -135,6 +135,6 @@ import CustomChartBackground from './CustomChartBackground';
       }
   }
 
-  export default Graph;
+  export default Graph2;
 
  

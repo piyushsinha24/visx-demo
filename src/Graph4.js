@@ -11,34 +11,16 @@ import {
 
 import CustomChartBackground from './CustomChartBackground';
 
-  const Demand = [
-    { x: "Jan'21", y: 10, total: 10 },
-    { x: "Feb'21", y: 23, total: 33 },
-    { x: "Mar'21", y: 27, total: 60 },
-    { x: "Apr'21", y: 32, total: 92 },
-    { x: "May'21", y: 40, total: 132 },
-    { x: "Jun'21", y: 45, total: 177 },
-    { x: "Jul'21", y: 50, total: 227 },
-    { x: "Aug'21", y: 55, total: 282 },
-    { x: "Sep'21", y: 65, total: 347 },
-    { x: "Oct'21", y: 75, total: 422 },
-    { x: "Nov'21", y: 85, total: 507 },
-    { x: "Dec'21", y: 100, total: 607 },
+  const ActualDemand = [
+    { x: "Jan'21", y: 3, total: 3 },
+    { x: "Feb'21", y: 17, total: 20 },
+    { x: "Mar'21", y: 10, total: 30 },
   ];
   
-  const Supply = [
-    { x: "Jan'21", y: 10, total: 10 },
-    { x: "Feb'21", y: 18, total: 28 },
-    { x: "Mar'21", y: 24, total: 52 },
-    { x: "Apr'21", y: 30, total: 82 },
-    { x: "May'21", y: 36, total: 118 },
-    { x: "Jun'21", y: 40, total: 158 },
-    { x: "Jul'21", y: 46, total: 204 },
-    { x: "Aug'21", y: 50, total: 254 },
-    { x: "Sep'21", y: 55, total: 309 },
-    { x: "Oct'21", y: 60, total: 369 },
-    { x: "Nov'21", y: 65, total: 434 },
-    { x: "Dec'21", y: 75, total: 509 },
+  const ActualSupply = [
+    { x: "Jan'21", y: 8, total: 8 },
+    { x: "Feb'21", y: 4, total: 12 },
+    { x: "Mar'21", y: 6, total: 18 },
   ];
   
   const accessors = {
@@ -47,21 +29,21 @@ import CustomChartBackground from './CustomChartBackground';
     totalAccessor: d => d.total
   };
 
-  const colors = {"Demand":"#0e8ff9", "Supply": "#ff6200"};
+  const colors = {"Actual Demand":"#0e8ff9", "Actual Supply": "#ff6200"};
   
   
-  class Graph extends Component {
+  class Graph4 extends Component {
       render() {
           return (
             <div>
-            <h2>Demand Vs Supply</h2>
+            <h2>Actual Demand Vs Actual Supply</h2>
             <XYChart height={600} xScale={{ type: 'band' }} yScale={{ type: 'linear' }}>
             <CustomChartBackground />
             <AnimatedAxis orientation="bottom"/>
             <AnimatedAxis orientation="left"/>
             <AnimatedGrid columns={false} numTicks={4} />
-            <AnimatedLineSeries dataKey="Demand" data={Demand} {...accessors} stroke={"#0e8ff9"}/>
-            <AnimatedAreaSeries dataKey="Supply" data={Supply} {...accessors} stroke={"#ff6200"} fill={"#ff6200"} fillOpacity={"0.8"}/>
+            <AnimatedLineSeries dataKey="Actual Demand" data={ActualDemand} {...accessors} stroke={"#0e8ff9"}/>
+            <AnimatedLineSeries dataKey="Actual Supply" data={ActualSupply} {...accessors} stroke={"#ff6200"}/>
             <Tooltip
               snapTooltipToDatumX
               snapTooltipToDatumY
@@ -86,7 +68,7 @@ import CustomChartBackground from './CustomChartBackground';
             <AnimatedAxis orientation="bottom"/>
             <AnimatedAxis orientation="left"/>
             <AnimatedGrid columns={false} numTicks={4} />
-            <AnimatedAreaSeries dataKey="Demand" data={Demand} {...accessors} stroke={"#0e8ff9"} fill={"#0e8ff9"} fillOpacity={0.6}/>
+            <AnimatedAreaSeries dataKey="Actual Demand" data={ActualDemand} {...accessors} stroke={"#0e8ff9"} fill={"#0e8ff9"} fillOpacity={0.6}/>
             <Tooltip
               snapTooltipToDatumX
               snapTooltipToDatumY
@@ -110,7 +92,7 @@ import CustomChartBackground from './CustomChartBackground';
             <AnimatedAxis orientation="bottom"/>
             <AnimatedAxis orientation="left"/>
             <AnimatedGrid columns={false} numTicks={4} />
-            <AnimatedAreaSeries dataKey="Supply" data={Supply} {...accessors} stroke={"#ff6200"} fill={"#ff6200"} fillOpacity={0.8}/>
+            <AnimatedAreaSeries dataKey="Actual Supply" data={ActualSupply} {...accessors} stroke={"#ff6200"} fill={"#ff6200"} fillOpacity={0.8}/>
             <Tooltip
               snapTooltipToDatumX
               snapTooltipToDatumY
@@ -135,6 +117,6 @@ import CustomChartBackground from './CustomChartBackground';
       }
   }
 
-  export default Graph;
+  export default Graph4;
 
  
