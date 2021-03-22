@@ -42,8 +42,8 @@ import CustomChartBackground from './CustomChartBackground';
             <AnimatedAxis orientation="bottom"/>
             <AnimatedAxis orientation="left"/>
             <AnimatedGrid columns={false} numTicks={4} />
-            <AnimatedLineSeries dataKey="Actual Demand" data={ActualDemand} {...accessors} stroke={"#0e8ff9"}/>
-            <AnimatedLineSeries dataKey="Actual Supply" data={ActualSupply} {...accessors} stroke={"#ff6200"}/>
+            <AnimatedAreaSeries dataKey="Actual Demand" data={ActualDemand} {...accessors} stroke={"#0e8ff9"} fill={"#0e8ff9"} fillOpacity={"0.6"}/>
+            <AnimatedAreaSeries dataKey="Actual Supply" data={ActualSupply} {...accessors} stroke={"#ff6200"} fill={"#ff6200"} fillOpacity={"0.8"}/>
             <Tooltip
               snapTooltipToDatumX
               snapTooltipToDatumY

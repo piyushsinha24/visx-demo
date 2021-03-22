@@ -13,32 +13,32 @@ import CustomChartBackground from './CustomChartBackground';
 
   const PlannedDemand = [
     { x: "Jan'21", y: 10, total: 10 },
-    { x: "Feb'21", y: 23, total: 33 },
-    { x: "Mar'21", y: 27, total: 60 },
-    { x: "Apr'21", y: 32, total: 92 },
-    { x: "May'21", y: 40, total: 132 },
-    { x: "Jun'21", y: 45, total: 177 },
-    { x: "Jul'21", y: 50, total: 227 },
-    { x: "Aug'21", y: 55, total: 282 },
-    { x: "Sep'21", y: 65, total: 347 },
-    { x: "Oct'21", y: 75, total: 422 },
-    { x: "Nov'21", y: 85, total: 507 },
-    { x: "Dec'21", y: 100, total: 607 },
+    { x: "Feb'21", y: 13, total: 23 },
+    { x: "Mar'21", y: 4, total: 27 },
+    { x: "Apr'21", y: 5, total: 32 },
+    { x: "May'21", y: 8, total: 40 },
+    { x: "Jun'21", y: 5, total: 45 },
+    { x: "Jul'21", y: 5, total: 50 },
+    { x: "Aug'21", y: 5, total: 55 },
+    { x: "Sep'21", y: 10, total: 65 },
+    { x: "Oct'21", y: 10, total: 75 },
+    { x: "Nov'21", y: 10, total: 85 },
+    { x: "Dec'21", y: 15, total:100 },
   ];
   
   const PlannedSupply = [
     { x: "Jan'21", y: 10, total: 10 },
-    { x: "Feb'21", y: 18, total: 28 },
-    { x: "Mar'21", y: 24, total: 52 },
-    { x: "Apr'21", y: 30, total: 82 },
-    { x: "May'21", y: 36, total: 118 },
-    { x: "Jun'21", y: 40, total: 158 },
-    { x: "Jul'21", y: 46, total: 204 },
-    { x: "Aug'21", y: 50, total: 254 },
-    { x: "Sep'21", y: 55, total: 309 },
-    { x: "Oct'21", y: 60, total: 369 },
-    { x: "Nov'21", y: 65, total: 434 },
-    { x: "Dec'21", y: 75, total: 509 },
+    { x: "Feb'21", y: 8, total: 18 },
+    { x: "Mar'21", y: 6, total: 24 },
+    { x: "Apr'21", y: 6, total: 30 },
+    { x: "May'21", y: 6, total: 36 },
+    { x: "Jun'21", y: 4, total: 40 },
+    { x: "Jul'21", y: 6, total: 46 },
+    { x: "Aug'21", y: 4, total: 50 },
+    { x: "Sep'21", y: 5, total: 55 },
+    { x: "Oct'21", y: 5, total: 60 },
+    { x: "Nov'21", y: 5, total: 65 },
+    { x: "Dec'21", y: 5, total: 75 },
   ];
   
   const accessors = {
@@ -60,7 +60,7 @@ import CustomChartBackground from './CustomChartBackground';
             <AnimatedAxis orientation="bottom"/>
             <AnimatedAxis orientation="left"/>
             <AnimatedGrid columns={false} numTicks={4} />
-            <AnimatedLineSeries dataKey="Planned Demand" data={PlannedDemand} {...accessors} stroke={"#0e8ff9"}/>
+            <AnimatedAreaSeries dataKey="Planned Demand" data={PlannedDemand} {...accessors} stroke={"#0e8ff9"} fill={"#0e8ff9"} fillOpacity={"0.6"}/>
             <AnimatedAreaSeries dataKey="Planned Supply" data={PlannedSupply} {...accessors} stroke={"#ff6200"} fill={"#ff6200"} fillOpacity={"0.8"}/>
             <Tooltip
               snapTooltipToDatumX

@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <Graph />
       <Graph2 />
-      <Graph3 />
       <Graph4 />
+      <Graph3 />
     </div>
   );
 }
