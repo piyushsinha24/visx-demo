@@ -3,7 +3,6 @@ import './Graph.css';
 import {
     AnimatedAxis,
     AnimatedGrid,
-    AnimatedLineSeries,
     AnimatedAreaSeries,
     XYChart,
     Tooltip,
