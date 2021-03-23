@@ -11,39 +11,39 @@ import {
 import CustomChartBackground from './CustomChartBackground';
 
   const PlannedDemand = [
-    { x: "Jan'21", y: 10, total: 10 },
-    { x: "Feb'21", y: 13, total: 23 },
-    { x: "Mar'21", y: 4, total: 27 },
-    { x: "Apr'21", y: 5, total: 32 },
-    { x: "May'21", y: 8, total: 40 },
-    { x: "Jun'21", y: 5, total: 45 },
-    { x: "Jul'21", y: 5, total: 50 },
-    { x: "Aug'21", y: 5, total: 55 },
-    { x: "Sep'21", y: 10, total: 65 },
-    { x: "Oct'21", y: 10, total: 75 },
-    { x: "Nov'21", y: 10, total: 85 },
-    { x: "Dec'21", y: 15, total:100 },
+    { x: "Jan'21", z: 10, y: 10 },
+    { x: "Feb'21", z: 13, y: 23 },
+    { x: "Mar'21", z: 4, y: 27 },
+    { x: "Apr'21", z: 5, y: 32 },
+    { x: "May'21", z: 8, y: 40 },
+    { x: "Jun'21", z: 5, y: 45 },
+    { x: "Jul'21", z: 5, y: 50 },
+    { x: "Aug'21", z: 5, y: 55 },
+    { x: "Sep'21", z: 10, y: 65 },
+    { x: "Oct'21", z: 10, y: 75 },
+    { x: "Nov'21", z: 10, y: 85 },
+    { x: "Dec'21", z: 15, y:100 },
   ];
   
   const PlannedSupply = [
-    { x: "Jan'21", y: 10, total: 10 },
-    { x: "Feb'21", y: 8, total: 18 },
-    { x: "Mar'21", y: 6, total: 24 },
-    { x: "Apr'21", y: 6, total: 30 },
-    { x: "May'21", y: 6, total: 36 },
-    { x: "Jun'21", y: 4, total: 40 },
-    { x: "Jul'21", y: 6, total: 46 },
-    { x: "Aug'21", y: 4, total: 50 },
-    { x: "Sep'21", y: 5, total: 55 },
-    { x: "Oct'21", y: 5, total: 60 },
-    { x: "Nov'21", y: 5, total: 65 },
-    { x: "Dec'21", y: 5, total: 75 },
+    { x: "Jan'21", z: 10, y: 10 },
+    { x: "Feb'21", z: 8, y: 18 },
+    { x: "Mar'21", z: 6, y: 24 },
+    { x: "Apr'21", z: 6, y: 30 },
+    { x: "May'21", z: 6, y: 36 },
+    { x: "Jun'21", z: 4, y: 40 },
+    { x: "Jul'21", z: 6, y: 46 },
+    { x: "Aug'21", z: 4, y: 50 },
+    { x: "Sep'21", z: 5, y: 55 },
+    { x: "Oct'21", z: 5, y: 60 },
+    { x: "Nov'21", z: 5, y: 65 },
+    { x: "Dec'21", z: 10, y: 75 },
   ];
   
   const accessors = {
     xAccessor: d => d.x,
     yAccessor: d => d.y,
-    totalAccessor: d => d.total
+    zAccessor: d => d.z
   };
 
   const colors = {"Planned Demand":"#0e8ff9", "Planned Supply": "#ff6200"};
@@ -73,8 +73,8 @@ import CustomChartBackground from './CustomChartBackground';
                   </div>
                   {accessors.xAccessor(tooltipData.nearestDatum.datum)}
                   {": "}
-                  {accessors.yAccessor(tooltipData.nearestDatum.datum)}
-                  <p>Total: {accessors.totalAccessor(tooltipData.nearestDatum.datum)}</p>
+                  {accessors.zAccessor(tooltipData.nearestDatum.datum)}
+                  <p>Total: {accessors.yAccessor(tooltipData.nearestDatum.datum)}</p>
                 </div>
               )}
             />
@@ -98,8 +98,8 @@ import CustomChartBackground from './CustomChartBackground';
                   </div>
                   {accessors.xAccessor(tooltipData.nearestDatum.datum)}
                   {": "}
-                  {accessors.yAccessor(tooltipData.nearestDatum.datum)}
-                  <p>Total: {accessors.totalAccessor(tooltipData.nearestDatum.datum)}</p>
+                  {accessors.zAccessor(tooltipData.nearestDatum.datum)}
+                  <p>Total: {accessors.yAccessor(tooltipData.nearestDatum.datum)}</p>
                 </div>
               )}
             />
@@ -122,8 +122,8 @@ import CustomChartBackground from './CustomChartBackground';
                   </div>
                   {accessors.xAccessor(tooltipData.nearestDatum.datum)}
                   {": "}
-                  {accessors.yAccessor(tooltipData.nearestDatum.datum)}
-                  <p>Total: {accessors.totalAccessor(tooltipData.nearestDatum.datum)}</p>
+                  {accessors.zAccessor(tooltipData.nearestDatum.datum)}
+                  <p>Total: {accessors.yAccessor(tooltipData.nearestDatum.datum)}</p>
                 </div>
               )}
             />

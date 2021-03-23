@@ -11,25 +11,25 @@ import {
 import CustomChartBackground from './CustomChartBackground';
 
   const PlannedDeployment = [
-    { x: "Feb'21", y: 0, total: 0 },
-    { x: "Mar'21", y: 2, total: 2 },
-    { x: "Apr'21", y: 9, total: 11 },
-    { x: "May'21", y: 6, total: 17 },
-    { x: "Jun'21", y: 5, total: 22 },
-    { x: "Jul'21", y: 5, total: 27 },
-    { x: "Aug'21", y: 5, total: 32 },
-    { x: "Sep'21", y: 1, total: 33 },
+    { x: "Feb'21", z: 0, y: 0 },
+    { x: "Mar'21", z: 2, y: 2 },
+    { x: "Apr'21", z: 9, y: 11 },
+    { x: "May'21", z: 6, y: 17 },
+    { x: "Jun'21", z: 5, y: 22 },
+    { x: "Jul'21", z: 5, y: 27 },
+    { x: "Aug'21", z: 5, y: 32 },
+    { x: "Sep'21", z: 1, y: 33 },
   ];
   
   const ActualDeployment = [
-    { x: "Feb'21", y: 2, total: 2 },
-    { x: "Mar'21", y: 1, total: 3 },
+    { x: "Feb'21", z: 2, y: 2 },
+    { x: "Mar'21", z: 1, y: 3 },
   ];
   
   const accessors = {
     xAccessor: d => d.x,
     yAccessor: d => d.y,
-    totalAccessor: d => d.total
+    zAccessor: d => d.z
   };
 
   const colors = {"Planned Deployment":"#0e8ff9", "Actual Deployment": "#ff6200"};
@@ -59,8 +59,8 @@ import CustomChartBackground from './CustomChartBackground';
                   </div>
                   {accessors.xAccessor(tooltipData.nearestDatum.datum)}
                   {": "}
-                  {accessors.yAccessor(tooltipData.nearestDatum.datum)}
-                  <p>Total: {accessors.totalAccessor(tooltipData.nearestDatum.datum)}</p>
+                  {accessors.zAccessor(tooltipData.nearestDatum.datum)}
+                  <p>Total: {accessors.yAccessor(tooltipData.nearestDatum.datum)}</p>
                 </div>
               )}
             />
@@ -84,8 +84,8 @@ import CustomChartBackground from './CustomChartBackground';
                   </div>
                   {accessors.xAccessor(tooltipData.nearestDatum.datum)}
                   {": "}
-                  {accessors.yAccessor(tooltipData.nearestDatum.datum)}
-                  <p>Total: {accessors.totalAccessor(tooltipData.nearestDatum.datum)}</p>
+                  {accessors.zAccessor(tooltipData.nearestDatum.datum)}
+                  <p>Total: {accessors.yAccessor(tooltipData.nearestDatum.datum)}</p>
                 </div>
               )}
             />
@@ -108,8 +108,8 @@ import CustomChartBackground from './CustomChartBackground';
                   </div>
                   {accessors.xAccessor(tooltipData.nearestDatum.datum)}
                   {": "}
-                  {accessors.yAccessor(tooltipData.nearestDatum.datum)}
-                  <p>Total: {accessors.totalAccessor(tooltipData.nearestDatum.datum)}</p>
+                  {accessors.zAccessor(tooltipData.nearestDatum.datum)}
+                  <p>Total: {accessors.yAccessor(tooltipData.nearestDatum.datum)}</p>
                 </div>
               )}
             />

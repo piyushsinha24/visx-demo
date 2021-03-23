@@ -11,21 +11,21 @@ import {
 import CustomChartBackground from './CustomChartBackground';
 
   const ActualDemand = [
-    { x: "Jan'21", y: 3, total: 3 },
-    { x: "Feb'21", y: 17, total: 20 },
-    { x: "Mar'21", y: 10, total: 30 },
+    { x: "Jan'21", z: 3, y: 3 },
+    { x: "Feb'21", z: 17, y: 20 },
+    { x: "Mar'21", z: 10, y: 30 },
   ];
   
   const ActualSupply = [
-    { x: "Jan'21", y: 8, total: 8 },
-    { x: "Feb'21", y: 4, total: 12 },
-    { x: "Mar'21", y: 6, total: 18 },
+    { x: "Jan'21", z: 8, y: 8 },
+    { x: "Feb'21", z: 4, y: 12 },
+    { x: "Mar'21", z: 6, y: 18 },
   ];
   
   const accessors = {
     xAccessor: d => d.x,
     yAccessor: d => d.y,
-    totalAccessor: d => d.total
+    zAccessor: d => d.z
   };
 
   const colors = {"Actual Demand":"#0e8ff9", "Actual Supply": "#ff6200"};
@@ -55,8 +55,8 @@ import CustomChartBackground from './CustomChartBackground';
                   </div>
                   {accessors.xAccessor(tooltipData.nearestDatum.datum)}
                   {": "}
-                  {accessors.yAccessor(tooltipData.nearestDatum.datum)}
-                  <p>Total: {accessors.totalAccessor(tooltipData.nearestDatum.datum)}</p>
+                  {accessors.zAccessor(tooltipData.nearestDatum.datum)}
+                  <p>Total: {accessors.yAccessor(tooltipData.nearestDatum.datum)}</p>
                 </div>
               )}
             />
@@ -80,8 +80,8 @@ import CustomChartBackground from './CustomChartBackground';
                   </div>
                   {accessors.xAccessor(tooltipData.nearestDatum.datum)}
                   {": "}
-                  {accessors.yAccessor(tooltipData.nearestDatum.datum)}
-                  <p>Total: {accessors.totalAccessor(tooltipData.nearestDatum.datum)}</p>
+                  {accessors.zAccessor(tooltipData.nearestDatum.datum)}
+                  <p>Total: {accessors.yAccessor(tooltipData.nearestDatum.datum)}</p>
                 </div>
               )}
             />
@@ -104,8 +104,8 @@ import CustomChartBackground from './CustomChartBackground';
                   </div>
                   {accessors.xAccessor(tooltipData.nearestDatum.datum)}
                   {": "}
-                  {accessors.yAccessor(tooltipData.nearestDatum.datum)}
-                  <p>Total: {accessors.totalAccessor(tooltipData.nearestDatum.datum)}</p>
+                  {accessors.zAccessor(tooltipData.nearestDatum.datum)}
+                  <p>Total: {accessors.yAccessor(tooltipData.nearestDatum.datum)}</p>
                 </div>
               )}
             />
