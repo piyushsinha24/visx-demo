@@ -73,23 +73,23 @@ const customTheme = {
             <div>
             <div className="color-divs">
                 <div style={{backgroundColor: "rgb(11, 114, 133)", width: "30px", height: "30px", margin: "4px"}}></div>
-                <p>Demand</p>
+                <p>Supply Ambition</p>
                 <div style={{backgroundColor: "rgb(102, 217, 232)", width: "30px", height: "30px", margin: "4px"}}></div>
-                <p>Supply</p>
+                <p>Supply Committed</p>
                 <div style={{backgroundColor: "rgb(252, 196, 25)", width: "30px", height: "30px", margin: "4px"}}></div>
-                <p>Actual Supply</p>
+                <p>Actual In Onboarding</p>
                 <div style={{backgroundColor: "rgb(255, 135, 135)", width: "30px", height: "30px", margin: "4px"}}></div>
-                <p>Actual Deployment</p>
+                <p>Actual Deployed</p>
             </div>
             <XYChart theme={customTheme} height={600} xScale={{ type: 'band' }} yScale={{ type: 'linear' }}>
             <CustomChartBackground />
             <AnimatedAxis orientation="bottom"/>
             <AnimatedAxis orientation="left"/>
             <AnimatedGrid columns={false} numTicks={4} />
-            <AnimatedLineSeries dataKey="Demand" data={Demand} {...accessors}/>
-            <AnimatedAreaSeries dataKey="Supply" data={Supply} {...accessors}/>
-            <AnimatedAreaSeries dataKey="Actual Supply" data={ActualSupply} {...accessors}/>
-            <AnimatedAreaSeries dataKey="Actual Deployment" data={ActualDeployment} {...accessors}/>
+            <AnimatedLineSeries dataKey="Supply Ambition" data={Demand} {...accessors}/>
+            <AnimatedAreaSeries dataKey="Supply Committed" data={Supply} {...accessors}/>
+            <AnimatedAreaSeries dataKey="Actual In Onboarding" data={ActualSupply} {...accessors}/>
+            <AnimatedAreaSeries dataKey="Actual Deployed" data={ActualDeployment} {...accessors}/>
             <Tooltip
               snapTooltipToDatumX
               snapTooltipToDatumY

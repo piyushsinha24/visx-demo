@@ -67,7 +67,7 @@ const customTheme = {
             <AnimatedGrid columns={false} numTicks={4} />
             <AnimatedAreaSeries dataKey="Total Demand" data={TotalDemand} {...accessors}/>
             <AnimatedAreaSeries dataKey="NL" data={NL} {...accessors}/>
-            <AnimatedAreaSeries dataKey="BE" data={BE} {...accessors} fillOpacity={"0.8"}/>
+            <AnimatedAreaSeries dataKey="BE" data={BE} {...accessors}/>
             <Tooltip
               snapTooltipToDatumX
               snapTooltipToDatumY
