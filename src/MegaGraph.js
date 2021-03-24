@@ -5,11 +5,20 @@ import {
     AnimatedGrid,
     AnimatedLineSeries,
     AnimatedAreaSeries,
+    lightTheme,
     XYChart,
     Tooltip,
   } from '@visx/xychart';
 
 import CustomChartBackground from './CustomChartBackground';
+
+const myColors = ["rgb(11, 114, 133)", "rgb(102, 217, 232)", "rgb(252, 196, 25)", "rgb(255, 135, 135)"];
+
+const customTheme = {
+  ...lightTheme,
+  // order should match XYChart child series render order 
+  colors: [...myColors],
+};
 
   const Demand = [
     { x: "Jan'21", z: 10, y: 10 },
@@ -57,9 +66,6 @@ import CustomChartBackground from './CustomChartBackground';
     yAccessor: d => d.y,
     zAccessor: d => d.z
   };
-
-//   const colors = {"Demand":"rgb(248, 228, 53)", "Supply": "rgb(0, 53, 128)", "Actual Supply": "rgb(26, 135, 200)", "Actual Deployment": "rgb(143, 202, 231)"};
-  
   
   class MegaGraph extends Component {
       render() {
@@ -75,7 +81,7 @@ import CustomChartBackground from './CustomChartBackground';
                 <div style={{backgroundColor: "rgb(255, 135, 135)", width: "30px", height: "30px", margin: "4px"}}></div>
                 <p>Actual Deployment</p>
             </div>
-            <XYChart height={600} xScale={{ type: 'band' }} yScale={{ type: 'linear' }}>
+            <XYChart theme={customTheme} height={600} xScale={{ type: 'band' }} yScale={{ type: 'linear' }}>
             <CustomChartBackground />
             <AnimatedAxis orientation="bottom"/>
             <AnimatedAxis orientation="left"/>
@@ -89,7 +95,7 @@ import CustomChartBackground from './CustomChartBackground';
               snapTooltipToDatumY
               showVerticalCrosshair
               showSeriesGlyphs
-              renderTooltip={({ tooltipData, colorScale }) => (
+              renderTooltip={({ tooltipData, colorScale}) => (
                 <div style={{ padding: "4px"}}>
                   <div style={{ marginBottom: "8px", color: colorScale(tooltipData.nearestDatum.key)  ,textDecoration: "underline" }}>
                     {tooltipData.nearestDatum.key}
